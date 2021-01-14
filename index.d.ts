@@ -266,6 +266,9 @@ declare module 'shoukaku' {
     public setTimescale(timescalevalue?: TimescaleValue): Promise<ShoukakuPlayer>;
     public setTremolo(tremoloValue?: TremoloValue): Promise<ShoukakuPlayer>;
     public setVibrato(vibratoValue?: VibratoValue): Promise<ShoukakuPlayer>;
+    public setRotation(rotationValue?: RotationValue): Promise<ShoukakuPlayer>;
+    public setLowPass(lowPassValue?: LowPassValue): Promise<ShoukakuPlayer>;
+    public setChannelMix(channelMixValue?: ChannelMixValue): Promise<ShoukakuPlayer>;
     public setGroupedFilters(settings?: ShoukakuGroupedFilterOptions): Promise<ShoukakuPlayer>;
     public clearFilters(): Promise<ShoukakuPlayer>;
 
