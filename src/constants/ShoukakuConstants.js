@@ -158,6 +158,45 @@ class ShoukakuConstants {
         };
     }
     /**
+     * Available settings for rotation
+     * @typedef {RotationValue} RotationValue
+     * @property {?number} [speed] Rotation Speed level
+     * @memberof ShoukakuConstants#
+     */
+    static get RotationValue() {
+        return {
+            speed: 0
+        };
+    }
+    /**
+     * Available settings for lowPass
+     * @typedef {LowPassValue} LowPassValue
+     * @property {?number} [smoothing] Rotation Speed level
+     * @memberof ShoukakuConstants#
+     */
+    static get LowPassValue() {
+        return {
+            smoothing: 0
+        };
+    }
+    /**
+     * Available settings for lowPass
+     * @typedef {ChannelMixValue} ChannelMixValue
+     * @property {?number} [leftToRight] left to right speed
+     * @property {?number} [rightToRight] right to right speed
+     * @property {?number} [rightToLeft] right to left speed
+     * @property {?number} [leftToLeft] left to left speed
+     * @memberof ShoukakuConstants#
+     */
+    static get ChannelMixValue() {
+        return {
+            leftToRight: 0,
+            rightToRight: 0,
+            rightToLeft: 0,
+            leftToLeft: 0
+        }
+    }
+    /**
      * Available settings for Timescale
      * @typedef {TimescaleValue} TimescaleValue
      * @property {?number} [speed] Timescale Speed

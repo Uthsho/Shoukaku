@@ -11,9 +11,12 @@ class ShoukakuFilter {
      * @param {ShoukakuConstants#TimescaleValue} [settings.timescale] timescale settings of this filter
      * @param {ShoukakuConstants#TremoloValue} [settings.tremolo] tremolo settings of this filter
      * @param {ShoukakuConstants#VibratoValue} [settings.vibrato] vibrato settings of this filter
+     * @param {ShoukakuConstants#RotationValue} [settings.rotation] rotation settings of this filter
+     * @param {ShoukakuConstants#LowPassValue} [settings.lowPass] lowPass settings of this filter
+     * @param {ShoukakuConstants#ChannelMixValue} [settings.channelMix] channelMix settings of this filter
      */
     constructor(settings = {}) {
-        const { volume, equalizer, karaoke, timescale, tremolo, vibrato } = settings;
+        const { volume, equalizer, karaoke, timescale, tremolo, vibrato, rotation, lowPass, channelMix } = settings;
         /**
          * The volume of this filter
          * @type {Number}
@@ -44,6 +47,22 @@ class ShoukakuFilter {
          * @type {?ShoukakuConstants#VibratoValue}
          */
         this.vibrato = vibrato || null;
+        /**
+         * The rotation settings set for this filter
+         * @type {?ShoukakuConstants#RotationValue}
+         */
+        this.rotation = rotation || null;
+        /**
+         * The lowPass settings set for this filter
+         * @type {?ShoukakuConstants#LowPassValue}
+         */
+        this.lowPass = lowPass || null;
+        /**
+         * The channelMix settings set for this filter
+         * @type {?ShoukakuConstants#ChannelMixValue}
+         */
+        this.channelMix = channelMix || null;
+
     }
 }
 

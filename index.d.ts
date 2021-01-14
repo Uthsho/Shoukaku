@@ -131,6 +131,10 @@ declare module 'shoukaku' {
     filterWidth?: number;
   }
 
+  export interface RotationValue {
+    speed?: number;
+  }
+
   export interface TimescaleValue {
     speed?: number;
     pitch?: number;
@@ -147,6 +151,17 @@ declare module 'shoukaku' {
     depth?: number;
   }
 
+  export interface LowPassValue {
+    smoothing?: number;
+  }
+
+  export interface ChannelMixValue {
+    leftToRight?: number;
+    rightToRight?: number;
+    rightToLeft?: number;
+    leftToLeft?: number;
+  }
+
   class ShoukakuConstants {
     static ShoukakuStatus: ShoukakuStatus;
     static ShoukakuNodeStats: ShoukakuNodeStats;
@@ -160,6 +175,9 @@ declare module 'shoukaku' {
     static TimescaleValue: TimescaleValue;
     static TremoloValue: TremoloValue;
     static VibratoValue: VibratoValue;
+    static RotationValue: RotationValue;
+    static LowPassValue: LowPassValue;
+    static ChannelMixValue: ChannelMixValue;
   }
 
   export { ShoukakuConstants as Constants };
@@ -171,6 +189,9 @@ declare module 'shoukaku' {
     public timescale?: TimescaleValue;
     public tremolo?: TremoloValue;
     public vibrato?: VibratoValue;
+    public rotation?: RotationValue;
+    public lowPass?: LowPassValue;
+    public channelMix?:ChannelMixValue;
   }
   
   export class ShoukakuGroupedFilterOptions {
