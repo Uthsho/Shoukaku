@@ -201,6 +201,9 @@ declare module 'shoukaku' {
     public timescale?: TimescaleValue;
     public tremolo?: TremoloValue;
     public vibrato?: VibratoValue;
+    public rotation?: RotationValue;
+    public lowPass?: LowPassValue;
+    public channelMix?:ChannelMixValue;
   }
 
   export class ShoukakuRest {
