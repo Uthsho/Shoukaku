@@ -277,7 +277,7 @@ declare module 'shoukaku' {
 
     private connect(options: unknown, callback:(error: ShoukakuError | Error | null, player: ShoukakuPlayer) => void): void;
     private updateFilters(): Promise<void>;
-    private resume(): Promise<void>;
+    public resume(): Promise<void>;
     private reset(cleanBand: boolean): void;
   }
 
